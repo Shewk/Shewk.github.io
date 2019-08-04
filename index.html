@@ -62,6 +62,44 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-enum" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/04/enum/" class="article-date">
+  <time datetime="2019-08-04T13:12:08.000Z" itemprop="datePublished">2019-08-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/04/enum/">enum的一种用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public enum VALUE &#123;</span><br><span class="line">	ONE, FIVE, TEN, TWENTY, FIFTY, HUNDRED</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Demo &#123;</span><br><span class="line">	static VALUE value;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// 通过value()循环输出每个ordinal()和值</span><br><span class="line">		for (VALUE v : VALUE.values())</span><br><span class="line">			System.out.println(v.ordinal() + "	" + v);</span><br><span class="line">		//在switch中使用enum</span><br><span class="line">		switch (value) &#123;</span><br><span class="line">		case ONE:</span><br><span class="line">			System.out.println("$1");</span><br><span class="line">			break;</span><br><span class="line">		case FIVE:</span><br><span class="line">			System.out.println("$5");</span><br><span class="line">			break;</span><br><span class="line">		case TEN:</span><br><span class="line">			System.out.println("$10");</span><br><span class="line">			break;</span><br><span class="line">		case TWENTY:</span><br><span class="line">			System.out.println("$20");</span><br><span class="line">			break;</span><br><span class="line">		case FIFTY:</span><br><span class="line">			System.out.println("$50");</span><br><span class="line">			break;</span><br><span class="line">		case HUNDRED:</span><br><span class="line">			System.out.println("$100");</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/04/enum/" data-id="cjyx0fiyw00013wvq2p1daivz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-赋值" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/08/03/赋值/" class="article-date">
@@ -101,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/03/赋值/" data-id="cjyv81srg0001xgvqa03yz6yd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/03/赋值/" data-id="cjyx0fiyy00023wvqzl770nqe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -174,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/28/hexo博客搭建/" data-id="cjyv81sr40000xgvqifuyxu5f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/28/hexo博客搭建/" data-id="cjyx0fiyl00003wvq8wi52j9q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,6 +251,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/08/04/enum/">enum的一种用法</a>
+          </li>
         
           <li>
             <a href="/2019/08/03/赋值/">赋值</a>
