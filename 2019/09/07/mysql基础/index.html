@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="数据库的操作 1234567891011121314查看所有数据库show databases;创建数据库(指定字符集格式)create database database_name [character set gbk/utf8];删除数据库drop database database_name;使用数据库use database_name;查看数据库详情show create database">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-07T13:13:38.802Z">
+<meta property="og:updated_time" content="2019-09-10T13:55:01.982Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql基础">
 <meta name="twitter:description" content="数据库的操作 1234567891011121314查看所有数据库show databases;创建数据库(指定字符集格式)create database database_name [character set gbk/utf8];删除数据库drop database database_name;使用数据库use database_name;查看数据库详情show create database">
@@ -93,13 +93,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">查看所有表</span><br><span class="line">show tables;</span><br><span class="line"></span><br><span class="line">创建表</span><br><span class="line">create table table_name(字段1名 字段1类型,字段2名 字段2类型)[engine=innodb/myisam charset=gbk/utf8];</span><br><span class="line"></span><br><span class="line">删除表</span><br><span class="line">drop table table_name;</span><br><span class="line"></span><br><span class="line">查看表详情</span><br><span class="line">show create table table_name;</span><br><span class="line"></span><br><span class="line">查看表字段</span><br><span class="line">desc table_name;</span><br></pre></td></tr></table></figure>
 
 <p>修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">改表名</span><br><span class="line">rename table t1 to t2;</span><br><span class="line"></span><br><span class="line">修改引擎字符集 </span><br><span class="line">alter table t1 engine=myisam/innodb charset=utf8/gbk;</span><br><span class="line"></span><br><span class="line">添加表字段  </span><br><span class="line">alter table t1 add age int first/after xxx;</span><br><span class="line"></span><br><span class="line">删除表字段</span><br><span class="line">alter table t1 drop age</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">改表名</span><br><span class="line">rename table t_name to t2;</span><br><span class="line"></span><br><span class="line">修改引擎字符集 </span><br><span class="line">alter table t_name engine=myisam/innodb charset=utf8/gbk;</span><br><span class="line"></span><br><span class="line">添加表字段  </span><br><span class="line">alter table t_name add age int first/after xxx;</span><br><span class="line"></span><br><span class="line">修改长度(原长100)</span><br><span class="line">alter table t_name modify name varchar(40)</span><br><span class="line"></span><br><span class="line">删除表字段</span><br><span class="line">alter table t_name drop age</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/07/mysql基础/" data-id="ck09knr2p000034vqmc28qpvb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/07/mysql基础/" data-id="ck0dwdzds0001owvq22g3ywm2" class="article-share-link">Share</a>
       
       
     </footer>
