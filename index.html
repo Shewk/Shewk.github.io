@@ -95,11 +95,13 @@
 <p>修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">改表名</span><br><span class="line">rename table t_name to t2;</span><br><span class="line"></span><br><span class="line">修改引擎字符集 </span><br><span class="line">alter table t_name engine=myisam/innodb charset=utf8/gbk;</span><br><span class="line"></span><br><span class="line">添加表字段  </span><br><span class="line">alter table t_name add age int first/after xxx;</span><br><span class="line"></span><br><span class="line">修改长度(原长100)</span><br><span class="line">alter table t_name modify name varchar(40);</span><br><span class="line"></span><br><span class="line">修改字段名字</span><br><span class="line">alter table t_name change column old_name new_name varchar(100); </span><br><span class="line"></span><br><span class="line">删除表字段</span><br><span class="line">alter table t_name drop age;</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">查找数据</span><br><span class="line">select 字段 from table_name <span class="built_in">where</span> 条件；</span><br><span class="line"></span><br><span class="line">查找所有数据</span><br><span class="line">select * from table_name;</span><br><span class="line"></span><br><span class="line">改(改多项的话，用逗号隔开)</span><br><span class="line">所有员工薪水改为5000</span><br><span class="line">update table_name <span class="built_in">set</span> salary = 5000;</span><br><span class="line">将name为fangchuang的员工薪水改为5000</span><br><span class="line">update table_name <span class="built_in">set</span> salary = 5000 <span class="built_in">where</span> name = <span class="string">'fangchuang'</span>;</span><br><span class="line">原基础上加1000</span><br><span class="line">update table_name <span class="built_in">set</span> salary = salary + 1000 <span class="built_in">where</span> name = <span class="string">'fangermazi'</span>;</span><br><span class="line"></span><br><span class="line">删</span><br><span class="line">delete from table_name <span class="built_in">where</span> name = <span class="string">'fangermazi'</span>;</span><br><span class="line">删除表中所有记录</span><br><span class="line">delete from table_name;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/07/mysql基础/" data-id="ck0dwzd180002u4vqxn3b0m77" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/07/mysql基础/" data-id="ck0i3f48s0000x0vqkh00qm8a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -137,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/04/enum/" data-id="ck0dwzd0r0001u4vqcib0yb9s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/04/enum/" data-id="ck0i3f48w0001x0vqzee0ivlr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -184,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/03/赋值/" data-id="ck0dwzd190003u4vqy15q5pty" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/03/赋值/" data-id="ck0i3f4990002x0vqv6911frt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,7 +259,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/28/hexo博客搭建/" data-id="ck0dwzd0m0000u4vq9x2euwrj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/28/hexo博客搭建/" data-id="ck0i3f49a0003x0vqwcl8hhiw" class="article-share-link">Share</a>
       
       
     </footer>
