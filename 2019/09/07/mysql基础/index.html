@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="1234567mysql类型int varcharchar dateblob 图片decimal(a,b)  共a位，有b位小数位  数据库的操作 1234567891011121314查看所有数据库show databases;创建数据库(指定字符集格式)create database database_name [character set gbk/utf8];删除数据库drop databa">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-13T12:22:45.339Z">
+<meta property="og:updated_time" content="2019-09-20T04:09:14.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql基础">
 <meta name="twitter:description" content="1234567mysql类型int varcharchar dateblob 图片decimal(a,b)  共a位，有b位小数位  数据库的操作 1234567891011121314查看所有数据库show databases;创建数据库(指定字符集格式)create database database_name [character set gbk/utf8];删除数据库drop databa">
@@ -99,11 +99,13 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">查找数据</span><br><span class="line">select 字段 from table_name <span class="built_in">where</span> 条件；</span><br><span class="line"></span><br><span class="line">查找所有数据</span><br><span class="line">select * from table_name;</span><br><span class="line"></span><br><span class="line">改(改多项的话，用逗号隔开)</span><br><span class="line">所有员工薪水改为5000</span><br><span class="line">update table_name <span class="built_in">set</span> salary = 5000;</span><br><span class="line">将name为fangchuang的员工薪水改为5000</span><br><span class="line">update table_name <span class="built_in">set</span> salary = 5000 <span class="built_in">where</span> name = <span class="string">'fangchuang'</span>;</span><br><span class="line">原基础上加1000</span><br><span class="line">update table_name <span class="built_in">set</span> salary = salary + 1000 <span class="built_in">where</span> name = <span class="string">'fangermazi'</span>;</span><br><span class="line"></span><br><span class="line">删</span><br><span class="line">delete from table_name <span class="built_in">where</span> name = <span class="string">'fangermazi'</span>;</span><br><span class="line">删除表中所有记录</span><br><span class="line">delete from table_name;</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">主键约束</span><br><span class="line">表示每条数据唯一性的字段</span><br><span class="line">约束：表示创建表时给字段添加的限制条件</span><br><span class="line">主键约束：非空，唯一</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">自增</span><br><span class="line">从历史最大值基础上增加</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/07/mysql基础/" data-id="ck0i3f48s0000x0vqkh00qm8a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/07/mysql基础/" data-id="ck0usbdrq00048ovqe8qkftfk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -111,6 +113,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2019/09/13/mysql的limit子句/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mysql的limit子句
+        
+      </div>
+    </a>
   
   
     <a href="/2019/08/04/enum/" id="article-nav-older" class="article-nav-link-wrap">
@@ -152,19 +163,23 @@
       <ul>
         
           <li>
+            <a href="/2019/09/22/向上转型/">向上转型</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/22/继承组合/">继承组合</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/13/mysql的limit子句/">mysql的limit子句</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/07/mysql基础/">mysql基础</a>
           </li>
         
           <li>
             <a href="/2019/08/04/enum/">enum的一种用法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/03/赋值/">赋值</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/28/hexo博客搭建/">hexo博客搭建</a>
           </li>
         
       </ul>

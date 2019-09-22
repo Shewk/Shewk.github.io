@@ -62,6 +62,120 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-向上转型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/22/向上转型/" class="article-date">
+  <time datetime="2019-09-22T09:19:47.000Z" itemprop="datePublished">2019-09-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/22/向上转型/">向上转型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Instrument &#123;</span><br><span class="line">	void <span class="function"><span class="title">play</span></span>() &#123;&#125;</span><br><span class="line">	</span><br><span class="line">	static void tune(Instrument i) &#123;</span><br><span class="line">		i.play();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Wind extends Instrument &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Wind flute = new Wind();</span><br><span class="line">		Instrument.tune(flute);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tune()可以接受Instrument引用，但在Wind.main中,传递给tune()方法的是Wind引用，认识到Wind对象也是一种Instrument对象，即向上转型。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/22/向上转型/" data-id="ck0usbdrl00018ovq0o2py2of" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-继承组合" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/22/继承组合/" class="article-date">
+  <time datetime="2019-09-22T09:18:26.000Z" itemprop="datePublished">2019-09-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/22/继承组合/">继承组合</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/22/继承组合/" data-id="ck0usbdrf00008ovqzmb12sha" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mysql的limit子句" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/13/mysql的limit子句/" class="article-date">
+  <time datetime="2019-09-13T12:31:57.000Z" itemprop="datePublished">2019-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/13/mysql的limit子句/">mysql的limit子句</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Limit子句参数用法"><a href="#Limit子句参数用法" class="headerlink" title="Limit子句参数用法"></a><strong>Limit子句</strong>参数用法</h3><p>Limit接受一个或两个整数参数</p>
+<p>一个参数：它表示返回最大的记录数。从第一行开始算。</p>
+<p>两个参数：参数1是指定第一个返回的记录行的索引+1，参数2是最后返回最大的记录数</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/13/mysql的limit子句/" data-id="ck0usbdrp00038ovq5a3hbwum" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-mysql基础" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/07/mysql基础/" class="article-date">
@@ -97,11 +211,13 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">查找数据</span><br><span class="line">select 字段 from table_name <span class="built_in">where</span> 条件；</span><br><span class="line"></span><br><span class="line">查找所有数据</span><br><span class="line">select * from table_name;</span><br><span class="line"></span><br><span class="line">改(改多项的话，用逗号隔开)</span><br><span class="line">所有员工薪水改为5000</span><br><span class="line">update table_name <span class="built_in">set</span> salary = 5000;</span><br><span class="line">将name为fangchuang的员工薪水改为5000</span><br><span class="line">update table_name <span class="built_in">set</span> salary = 5000 <span class="built_in">where</span> name = <span class="string">'fangchuang'</span>;</span><br><span class="line">原基础上加1000</span><br><span class="line">update table_name <span class="built_in">set</span> salary = salary + 1000 <span class="built_in">where</span> name = <span class="string">'fangermazi'</span>;</span><br><span class="line"></span><br><span class="line">删</span><br><span class="line">delete from table_name <span class="built_in">where</span> name = <span class="string">'fangermazi'</span>;</span><br><span class="line">删除表中所有记录</span><br><span class="line">delete from table_name;</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">主键约束</span><br><span class="line">表示每条数据唯一性的字段</span><br><span class="line">约束：表示创建表时给字段添加的限制条件</span><br><span class="line">主键约束：非空，唯一</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">自增</span><br><span class="line">从历史最大值基础上增加</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/07/mysql基础/" data-id="ck0i3f48s0000x0vqkh00qm8a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/07/mysql基础/" data-id="ck0usbdrq00048ovqe8qkftfk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,7 +255,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/04/enum/" data-id="ck0i3f48w0001x0vqzee0ivlr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/04/enum/" data-id="ck0usbdrn00028ovq88q3o6hn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,7 +302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/03/赋值/" data-id="ck0i3f4990002x0vqv6911frt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/03/赋值/" data-id="ck0usbds400068ovq1o702owj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -259,7 +375,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/28/hexo博客搭建/" data-id="ck0i3f49a0003x0vqwcl8hhiw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/28/hexo博客搭建/" data-id="ck0usbds200058ovq3qk7ia6z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -300,19 +416,23 @@
       <ul>
         
           <li>
+            <a href="/2019/09/22/向上转型/">向上转型</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/22/继承组合/">继承组合</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/13/mysql的limit子句/">mysql的limit子句</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/07/mysql基础/">mysql基础</a>
           </li>
         
           <li>
             <a href="/2019/08/04/enum/">enum的一种用法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/03/赋值/">赋值</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/28/hexo博客搭建/">hexo博客搭建</a>
           </li>
         
       </ul>
