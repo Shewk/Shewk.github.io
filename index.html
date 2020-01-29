@@ -62,6 +62,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-mysql" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/29/mysql/" class="article-date">
+  <time datetime="2020-01-29T14:30:08.000Z" itemprop="datePublished">2020-01-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/29/mysql/">mysql基础（1）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="语句规范"><a href="#语句规范" class="headerlink" title="语句规范"></a><em>语句规范</em></h6><p><em>1.语句以 ； 结尾</em></p>
+<p><em>2.可以换行，关键字之间用空格分隔(可以有多个空格)</em></p>
+<p><em>3.关键字不区分大小写</em></p>
+<h6 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">单行注释</span><br><span class="line">-- select * from person (快捷键&apos;ctrl&apos; + &apos;/&apos;)</span><br><span class="line"># select * from person</span><br><span class="line">多行注释</span><br><span class="line">/* select * from person */</span><br></pre></td></tr></table></figure>
+
+<p>注释</p>
+<hr>
+<p><strong>1.数据库相关SQL：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">查看所有数据库</span><br><span class="line">show databases;</span><br><span class="line"></span><br><span class="line">创建数据库</span><br><span class="line">create database 库名;</span><br><span class="line"></span><br><span class="line">删除数据库</span><br><span class="line">drop database 库名;</span><br><span class="line"></span><br><span class="line">使用指定数据库</span><br><span class="line">use 库名;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.表相关SQL</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">查看库中所有表</span><br><span class="line">show tables;</span><br><span class="line"></span><br><span class="line">显示指定库中的所有表</span><br><span class="line">show tables from 库名;</span><br><span class="line"></span><br><span class="line">创建表</span><br><span class="line">create table 表名&#123;</span><br><span class="line">字段名1 字段类型,</span><br><span class="line">字段名2 字段类型,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">删除表</span><br><span class="line">drop table 表名;</span><br><span class="line"></span><br><span class="line">查看表结构</span><br><span class="line">desc 表名;</span><br><span class="line"></span><br><span class="line">修改表名</span><br><span class="line">rename table t1 to t2;</span><br><span class="line"></span><br><span class="line">添加字段</span><br><span class="line">alter table 表名 add 字段名 字段类型 first / after 某一字段;</span><br><span class="line"></span><br><span class="line">删除字段</span><br><span class="line">alter table 表名 drop 字段名;</span><br><span class="line"></span><br><span class="line">修改字段名称和类型</span><br><span class="line">alter table t1 change 原名 新名 新类型;</span><br><span class="line"></span><br><span class="line">修改字段名称和位置</span><br><span class="line">alter table t1 modify 字段名 新类型 first / after 某一字段;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.SQL语言分类</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">DDL(Data Definition Language) : 数据定义语言</span><br><span class="line">	create、drop、alter、truncate</span><br><span class="line">	truncate:删除表并创建新表  和使用delete清空表不同的是，自增数值会清零  </span><br><span class="line">	不支持事务</span><br><span class="line"></span><br><span class="line">DML(Data Manipulation Language) : 数据操作语言</span><br><span class="line">	insert、update、delete、select（DQL） </span><br><span class="line">	支持事务</span><br><span class="line"></span><br><span class="line">DQL(Data Query Language) : 数据查询语言</span><br><span class="line">	select</span><br><span class="line"></span><br><span class="line">TCL(Transaction Control Language) : 事务控制语言</span><br><span class="line">	begin，commit，rollback，savepoint xxx,rollback to xxx;</span><br><span class="line"></span><br><span class="line">DCL(Data Control Language) : 数据控制语言</span><br><span class="line">	分配用户权限相关SQL</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/29/mysql/" data-id="ck5zhcbxs0002pcvqxx4g7r7j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-markdonw语法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/29/markdonw语法/" class="article-date">
@@ -580,104 +630,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/29/markdonw语法/" data-id="ck5zh6lyd0009xgvqlbb24vaw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mysql" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/20/mysql/" class="article-date">
-  <time datetime="2019-12-20T06:18:08.000Z" itemprop="datePublished">2019-12-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/20/mysql/">mysql基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Mysql基础（1）"><a href="#Mysql基础（1）" class="headerlink" title="Mysql基础（1）"></a>Mysql基础（1）</h2><h6 id="语句规范"><a href="#语句规范" class="headerlink" title="语句规范"></a><em>语句规范</em></h6><p><em>1.语句以 ； 结尾</em></p>
-<p><em>2.可以换行，关键字之间用空格分隔(可以有多个空格)</em></p>
-<p><em>3.关键字不区分大小写</em></p>
-<h6 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">单行注释</span><br><span class="line">-- select * from person (快捷键&apos;ctrl&apos; + &apos;/&apos;)</span><br><span class="line"># select * from person</span><br><span class="line">多行注释</span><br><span class="line">/* select * from person */</span><br></pre></td></tr></table></figure>
-
-<p>注释</p>
-<hr>
-<p><strong>1.数据库相关SQL：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">查看所有数据库</span><br><span class="line">show databases;</span><br><span class="line"></span><br><span class="line">创建数据库</span><br><span class="line">create database 库名;</span><br><span class="line"></span><br><span class="line">删除数据库</span><br><span class="line">drop database 库名;</span><br><span class="line"></span><br><span class="line">使用指定数据库</span><br><span class="line">use 库名;</span><br></pre></td></tr></table></figure>
-
-<p><strong>2.表相关SQL</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">查看库中所有表</span><br><span class="line">show tables;</span><br><span class="line"></span><br><span class="line">显示指定库中的所有表</span><br><span class="line">show tables from 库名;</span><br><span class="line"></span><br><span class="line">创建表</span><br><span class="line">create table 表名&#123;</span><br><span class="line">字段名1 字段类型,</span><br><span class="line">字段名2 字段类型,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">删除表</span><br><span class="line">drop table 表名;</span><br><span class="line"></span><br><span class="line">查看表结构</span><br><span class="line">desc 表名;</span><br><span class="line"></span><br><span class="line">修改表名</span><br><span class="line">rename table t1 to t2;</span><br><span class="line"></span><br><span class="line">添加字段</span><br><span class="line">alter table 表名 add 字段名 字段类型 first / after 某一字段;</span><br><span class="line"></span><br><span class="line">删除字段</span><br><span class="line">alter table 表名 drop 字段名;</span><br><span class="line"></span><br><span class="line">修改字段名称和类型</span><br><span class="line">alter table t1 change 原名 新名 新类型;</span><br><span class="line"></span><br><span class="line">修改字段名称和位置</span><br><span class="line">alter table t1 modify 字段名 新类型 first / after 某一字段;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.SQL语言分类</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">DDL(Data Definition Language) : 数据定义语言</span><br><span class="line">	create、drop、alter、truncate</span><br><span class="line">	truncate:删除表并创建新表  和使用delete清空表不同的是，自增数值会清零  </span><br><span class="line">	不支持事务</span><br><span class="line"></span><br><span class="line">DML(Data Manipulation Language) : 数据操作语言</span><br><span class="line">	insert、update、delete、select（DQL） </span><br><span class="line">	支持事务</span><br><span class="line"></span><br><span class="line">DQL(Data Query Language) : 数据查询语言</span><br><span class="line">	select</span><br><span class="line"></span><br><span class="line">TCL(Transaction Control Language) : 事务控制语言</span><br><span class="line">	begin，commit，rollback，savepoint xxx,rollback to xxx;</span><br><span class="line"></span><br><span class="line">DCL(Data Control Language) : 数据控制语言</span><br><span class="line">	分配用户权限相关SQL</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/20/mysql/" data-id="ck5zh6lwz0003xgvqwlju2swe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mysql基础（1）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/20/mysql基础（1）/" class="article-date">
-  <time datetime="2019-12-20T06:18:08.000Z" itemprop="datePublished">2019-12-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/20/mysql基础（1）/">mysql基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Mysql基础（1）"><a href="#Mysql基础（1）" class="headerlink" title="Mysql基础（1）"></a>Mysql基础（1）</h2><h6 id="语句规范"><a href="#语句规范" class="headerlink" title="语句规范"></a><em>语句规范</em></h6><p><em>1.语句以 ； 结尾</em></p>
-<p><em>2.可以换行，关键字之间用空格分隔(可以有多个空格)</em></p>
-<p><em>3.关键字不区分大小写</em></p>
-<h6 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">单行注释</span><br><span class="line">-- select * from person (快捷键&apos;ctrl&apos; + &apos;/&apos;)</span><br><span class="line"># select * from person</span><br><span class="line">多行注释</span><br><span class="line">/* select * from person */</span><br></pre></td></tr></table></figure>
-
-<p>注释</p>
-<hr>
-<p><strong>1.数据库相关SQL：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">查看所有数据库</span><br><span class="line">show databases;</span><br><span class="line"></span><br><span class="line">创建数据库</span><br><span class="line">create database 库名;</span><br><span class="line"></span><br><span class="line">删除数据库</span><br><span class="line">drop database 库名;</span><br><span class="line"></span><br><span class="line">使用指定数据库</span><br><span class="line">use 库名;</span><br></pre></td></tr></table></figure>
-
-<p><strong>2.表相关SQL</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">查看库中所有表</span><br><span class="line">show tables;</span><br><span class="line"></span><br><span class="line">显示指定库中的所有表</span><br><span class="line">show tables from 库名;</span><br><span class="line"></span><br><span class="line">创建表</span><br><span class="line">create table 表名&#123;</span><br><span class="line">字段名1 字段类型,</span><br><span class="line">字段名2 字段类型,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">删除表</span><br><span class="line">drop table 表名;</span><br><span class="line"></span><br><span class="line">查看表结构</span><br><span class="line">desc 表名;</span><br><span class="line"></span><br><span class="line">修改表名</span><br><span class="line">rename table t1 to t2</span><br><span class="line"></span><br><span class="line">添加字段</span><br><span class="line">alter table 表名 add 字段名 字段类型 first / after 某一字段;</span><br><span class="line"></span><br><span class="line">删除字段</span><br><span class="line">alter table 表名 drop 字段名;</span><br><span class="line"></span><br><span class="line">修改字段名称和类型</span><br><span class="line">alter table t1 change 原名 新名 新类型</span><br><span class="line"></span><br><span class="line">修改字段名称和位置</span><br><span class="line">alter table t1 modify 字段名 新类型 first/after xxx</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/20/mysql基础（1）/" data-id="ck5zh6lx10005xgvqix90nacp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/01/29/markdonw语法/" data-id="ck5zhcbyi0008pcvq6ynu5qfh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -715,7 +668,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/25/两数相加/" data-id="ck5zh6lx00004xgvqkfcfxrjj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/25/两数相加/" data-id="ck5zhcbxy0005pcvqdo43bovi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -757,7 +710,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/25/final关键字/" data-id="ck5zh6lwy0002xgvq0vl85dek" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/25/final关键字/" data-id="ck5zhcbxr0001pcvqhh3wwg8v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -798,7 +751,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/22/向上转型/" data-id="ck5zh6lxp0006xgvqalmzh1dg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/22/向上转型/" data-id="ck5zhcby10006pcvqwnawxr7s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -834,7 +787,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/22/继承组合/" data-id="ck5zh6ly10008xgvqrtanbh4p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/22/继承组合/" data-id="ck5zhcbxw0004pcvq14psvl9f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -872,7 +825,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/04/enum/" data-id="ck5zh6lwr0000xgvq0xonbp9g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/04/enum/" data-id="ck5zhcbwo0000pcvqm8mj1z01" class="article-share-link">Share</a>
       
       
     </footer>
@@ -919,7 +872,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/03/赋值/" data-id="ck5zh6lxt0007xgvqob6q6vmt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/03/赋值/" data-id="ck5zhcby20007pcvqu1ak2xak" class="article-share-link">Share</a>
       
       
     </footer>
@@ -992,7 +945,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/28/hexo博客搭建/" data-id="ck5zh6lww0001xgvqyy3mj49t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/28/hexo博客搭建/" data-id="ck5zhcbxu0003pcvqjm7830sy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1020,7 +973,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
     </div>
   </div>
 
@@ -1033,15 +986,11 @@
       <ul>
         
           <li>
+            <a href="/2020/01/29/mysql/">mysql基础（1）</a>
+          </li>
+        
+          <li>
             <a href="/2020/01/29/markdonw语法/">markdown语法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/20/mysql/">mysql基础</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/20/mysql基础（1）/">mysql基础</a>
           </li>
         
           <li>
@@ -1050,6 +999,10 @@
         
           <li>
             <a href="/2019/09/25/final关键字/">final关键字</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/22/向上转型/">向上转型</a>
           </li>
         
       </ul>
